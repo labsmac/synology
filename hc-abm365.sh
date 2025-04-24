@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 # ---------------------------------------------------------------
-#  monitor-abm.sh — Estado de Active Backup for Microsoft 365
-#  Healthchecks con /fail sólo si existe alguna tarea KO o el servicio está detenido.
+# Desarrollado por: Rodolfo Usquiano Moreno + ChatGPT :)
+# Fecha: 25/04/2025
+# Versión: 1.0
+# Blog: https://www.labsmac.es/
+# Linkedin: https://www.linkedin.com/in/rodolfo-usquiano/
+# ---------------------------------------------------------------
+# Script para monitorizar las copias de Active Backup for Microsoft 365 de Synology enviando informes a Healthchecks.io
 # ---------------------------------------------------------------
 set -euo pipefail
 IFS=$'\n\t'
 
 ######################## CONFIG ##################################
-HC_URL="https://healthchecks.infotec-nas02.synology.me/ping/01bef395-c076-4f9e-ad0a-d42a30457651"
+HC_URL="URL-HEALTHECKS.IO"
 HC_FAIL_SUFFIX="/fail"          # se añade cuando hay tareas KO o servicio parado
 PARTIAL_OK=true                 # ¿aceptar PARTIAL/FAILURE como OK?
 TAB=$'\t'                       # separador de columnas
