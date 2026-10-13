@@ -31,7 +31,7 @@ IFS=$'\n\t'
 
 # 2) CONFIGURACIÓN DE VARIABLES ------------------------------------
 
-CONF="$(dirname "$0")/hc-hyperbackup.conf"
+CONF="$(dirname "$0")/hc_hyperbackup.conf"
 [ -r "$CONF" ] || { echo "Falta $CONF" >&2; exit 2; }
 # shellcheck source=/dev/null
 
